@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block body %}
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/baseStyle.css'%}"/>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|PT+Serif" rel="stylesheet">
+
+    <ul>
+        <!-- object_list is a default name that consists of list of items... Made it into all_albums -->
+        {% for topic in object_list %}
+
+                <div class="card">
+                    <a href="{% url 'blog:detail' topic.id %}">
+                        <h1>{{ topic.topic_title }}</h1>
+                    </a>
+                    <a href="{% url 'blog:detail' topic.id %}">
+                        <h2>{{ topic.topic_subject }}</h2>
+                    </a>
+                    <img class = "background" src = "{{ topic.topic_logo.url }}" />
+                    <a href = "{% url 'blog:topicDelete' topic.id %}" style="color:#edeadc">
+                         <span class ="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        Delete Topic
+                    </a>
+                    &nbsp;
+                    <a href = "{% url 'blog:topicUpdate' topic.id %}" style="color:#edeadc">
+                        <span class ="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                        Update Topic
+                </a>
+                </div>
+
+
+        {% endfor %}
+    </ul>
+
+    <div class = "response">
+        <a href = "{% url 'blog:topicAdd' %}">
+            <span class ="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Topic
+        </a>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,20 @@
+<div id = "container">
+    <div class = "updateBox">
+        {% for field in form %}
+            {% load staticfiles %}
+            <link rel="stylesheet" type="text/css" href="{% static 'blog/updateStyle.css'%}"/>
+
+
+            <div class = "col-sm-offset-4 col-sm-8">
+                <span class = "text-danger small"> {{ field.errors }} </span>
+            </div>
+
+            <label class = "control-label col-sm-4">
+                {{ field.label_tag }}
+            </label>
+
+            <div class = "col-sm-8">{{ field }}</div>
+
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Delete Topic
+{% endblock %}
+
+{% block body %}
+   {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/confirmStyle.css'%}"/>
+
+    <div id = "container">
+        <div class = "confirmBox">
+            <form action= "" method="post">
+                {% csrf_token %}
+                <div class = "message">
+                  <h1>Delete "{{ object }}"?</h1>
+                </div>
+                <input class = "submitButton" type="submit" value="Confirm" />
+            </form>
+        </div>
+    </div>
+{% endblock %}

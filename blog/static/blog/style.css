@@ -1,0 +1,17 @@
+body{
+     background: white url("images/rsz_bkimg.jpg");
+}
+ .navbar{
+     border-radius: 0;
+}
+ .navbar-brand{
+     font-family: 'Libre Baskerville', serif;
+}
+ .col-md-6 {
+     color: white;
+     font-size: 20px;
+     font-family: 'Libre Baskerville', serif;
+}
+ .footer {
+     padding: 8px;
+}

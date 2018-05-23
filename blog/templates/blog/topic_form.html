@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% block title %} New Album {% endblock %}
+
+{% block body %}
+<!-- the view will handle action and enctype is for any form of data-->
+<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- Foreign Field Handling... So we can adapt to data -->
+    {% include 'blog/form-template.html' %}
+    <div class = "form-group">
+        <div class = "col-sm-offset-2 col-sm-10">
+            <button type = "submit" class = "btn btn-success">
+                Submit
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock %}

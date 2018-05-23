@@ -1,0 +1,31 @@
+#container {
+     position: relative;
+     margin: auto;
+     overflow: hidden;
+     width: 700px;
+     height: 250px;
+}
+ .updateBox {
+     padding: 30px;
+     margin: auto;
+     height: 200px;
+     background: white;
+     border-radius: 20px;
+     box-shadow: 5px 5px 20px rgba($gray, 20%);
+}
+ .control-label {
+     font-size: 15px;
+     font-family: 'Libre Baskerville', serif;
+}
+ .submitButton {
+     position: absolute;
+     width: 50%;
+     height: 15%;
+     border-radius: 20px;
+     top: 50%;
+     left: 25%;
+     outline: 0;
+     border: none;
+     box-shadow: 2px 2px 10px rgba($dark, .5);
+     font-family: 'PT Serif', bold;
+}
