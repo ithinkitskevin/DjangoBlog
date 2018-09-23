@@ -6,7 +6,6 @@ from . import views
 app_name = 'blog'
 
 urlpatterns = [
-    # /music/
     url(r'^$',views.IndexView.as_view(), name='index'),
     #Default page, as carrot (^) is the start position and $ is the end position
 
